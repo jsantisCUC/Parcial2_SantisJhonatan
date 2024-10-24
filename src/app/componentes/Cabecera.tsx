@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import miLogo from "../../assets/img/images.png";
 
 export const Cabecera = () => {
@@ -8,9 +9,9 @@ export const Cabecera = () => {
         data-bs-theme="dark"
       >
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <NavLink className="navbar-brand" to="/">
             <img src={miLogo} alt="Logo"/>
-          </a>
+          </NavLink>
           <button
             className="navbar-toggler"
             type="button"
@@ -25,24 +26,24 @@ export const Cabecera = () => {
           <div className="collapse navbar-collapse" id="navbarColor01">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
-                  Home
-                </a>
+                <NavLink className="nav-link active" aria-current="page" to="/">
+                  Inicio
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Features
-                </a>
+                <NavLink className="nav-link" to="/disp">
+                  Dispositivos
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Pricing
-                </a>
+                <NavLink className="nav-link" to="/comp">
+                  Componentes
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  About
-                </a>
+                <NavLink className="nav-link" to="/supp">
+                  Soporte
+                </NavLink>
               </li>
             </ul>
             <form className="d-flex" role="search">
